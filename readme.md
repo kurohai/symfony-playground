@@ -26,14 +26,8 @@
 1. Create admin pages for Parts and Category
     1. Update admin pages dynamically.
     1. Any db model data validation should be a method on the model, not in admin pages.
-    1. 
-
 1. Create one View page for Parts containing list of parts in db, columns filterable, and sortable
-1. 1. Nav menu should have links to Home, PartsView, PartsAdmin, and CategoryAdmin
-
-
-
-
+1. Nav menu should have links to Home, PartsView, PartsAdmin, and CategoryAdmin
 
 
 I had a hunch that Symfony was a PHP web framework, which I confirmed. No idea what Doctrine was. Google says it's a PHP ORM. That's all I need to know to get started.
