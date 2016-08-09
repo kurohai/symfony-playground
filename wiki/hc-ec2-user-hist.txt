@@ -1,0 +1,273 @@
+    1  cd Workspace/TestApp/
+    2  pwd
+    3  sudo yum update
+    4  sudo yum install -y httpd24 php56 mysql55-server php56-mysqlnd
+    5  sudo service httpd start
+    6  sudo chkconfig httpd on
+    7  chkconfig --list httpd
+    8  cd Workspace/TestApp/
+    9  mv composer.phar ../
+   10  cd ../
+   11  ls
+   12  rm -r TestApp/
+   13  php composer.phar create-project symfony/framework-standard-edition TestApp
+   14  ls
+   15  sudo nano /etc/php.ini
+   16  cd TestApp/
+   17  ls
+   18  sudo nano /etc/httpd/conf/httpd.conf
+   19  ls web/
+   20  ls -l web/
+   21  ls -l
+   22  sudo service httpd restart
+   23  sudo nano /etc/httpd/conf/httpd.conf
+   24  cd ../
+   25  ls -l
+   26  cd ../
+   27  ls
+   28  cd Workspace/
+   29  ls
+   30  mv -r * /var/www/*
+   31  mv * /var/www/*
+   32  ls /var/www
+   33  ls /var/www/cgi-bin/
+   34  ls /var/www/error/
+   35  ls /var/www/html
+   36  mv composer.phar /var/www/html/
+   37  sudo mv composer.phar /var/www/html/
+   38  sudo mv TestApp /var/www/html/
+   39  ls
+   40  cd ../
+   41  rm -r Workspace/
+   42  ls
+   43  sudo nano /etc/httpd/conf/httpd.conf
+   44  sudo service httpd restart
+   45  sudo nano /etc/httpd/conf/httpd.conf
+   46  sudo service httpd restart
+   47  ls /var/www/html
+   48  mv /var/www/html/TestApp/* /var/www/html
+   49  sudo mv /var/www/html/TestApp/* /var/www/html
+   50  ls /var/www/html
+   51  rm -r /var/www/html/TestApp/
+   52  sudo rm -r /var/www/html/TestApp/
+   53  ls /var/www/html
+   54  sudo service httpd restart
+   55  cd /var/www/html/web
+   56  ls
+   57  nano config.php
+   58  cd ../
+   59  ls
+   60  chmod 777 app/*
+   61  chmod 777 var/*
+   62  ls
+   63  sudo yum install git
+   64  which rsync
+   65  man rsync
+   66  which ssh-add
+   67  ls
+   68  mkdir TestApp.git
+   69  cd TestApp.git/
+   70  git init --bare
+   71  cd /var/www/
+   72  ls
+   73  cd html
+   74  ls
+   75  touch .gitignore
+   76  sudo touch .gitignore
+   77  sudo nano .gitignore
+   78  git init git add .
+   79  git init
+   80  sudo git init
+   81  git add *
+   82  cd ../
+   83  ls -l
+   84  chmod 777 html
+   85  sudo chmod 777 html
+   86  cd html
+   87  git add *
+   88  cd /var
+   89  ls -l
+   90  sudo chmod 777 www
+   91  cd www/html/
+   92  git add *
+   93  sudo git add *
+   94  ls
+   95  git commit -m "Initial commit"
+   96  sudo git commit -m "Initial commit"
+   97  ls ~/TestApp.git/
+   98  ls ~/TestApp.git/branches/
+   99  ls ~/TestApp.git/objects/
+  100  ls ~/TestApp.git/objects/pack/
+  101  ls ~/TestApp.git/objects/info
+  102  sudo git remote add origin ec2-user@127.0.0.1:TestApp.git
+  103  git push origin master
+  104  ls
+  105  touch .ssh
+  106  logout
+  107  cd .ssh
+  108  ls
+  109  ls -l
+  110  chmod 400 HCTest.pem
+  111  ls -l
+  112  cd ../
+  113  cd .ssh
+  114  ssh-add HCTest.pem
+  115  sudo ssh-add HCTest.pem
+  116  ls
+  117  ssh-add HCTest.pem
+  118  eval `ssh-agent -s`
+  119  ssh-add HCTest.pem
+  120  cd /var/www/html
+  121  ls
+  122  git push origin master
+  123  sudo nano /home/ec2-user/.ssh/known_hosts
+  124  git push origin master
+  125  sudo git push origin master
+  126  sudo git remote list
+  127  sudo git remote show origin
+  128  sudo git remote
+  129  git remote get-url origin
+  130  ls ~
+  131  cd ~
+  132  ls -la
+  133  chmod 777 TestApp.git/
+  134  cd /var/www/html
+  135  ls
+  136  sudo git push origin master
+  137  git config --global user.name "Applicant"
+  138  git config --global user.email "applicant@highcottonusa.com"
+  139  sudo service git restart
+  140  sudo service git-daemon restart
+  141  sudo git push origin master
+  142  git remote get-url origin
+  143  ssh -i ~/.ssh/HCTest.pem ec2-user@127.0.0.1
+  144  sudo git push origin master
+  145  ssh -vT ec2-user@127.0.0.1
+  146  sudo git push origin master
+  147  sudo ssh -vT ec2-user@127.0.0.1
+  148  ls /root/
+  149  ls /root/.ssh
+  150  sudo ls /root/.ssh
+  151  ls ~/.ssh
+  152  ls ~/.ssh/authorized_keys
+  153  nano ~/.ssh/authorized_keys
+  154  ls
+  155  cd ~/.ssh
+  156  ls
+  157  mv HCTest.pem id_rsa
+  158  ls
+  159  sudo ssh -vT ec2-user@127.0.0.1
+  160  ls
+  161  sudo mv id_rsa /root/.ssh/id_rsa
+  162  ls
+  163  sudo ssh -vT ec2-user@127.0.0.1
+  164  cd /var/www/html
+  165  sudo git push origin master
+  166  ls
+  167  ls ~/TestApp.git/
+  168  ls ~/TestApp.git/branches/
+  169  ls ~/TestApp.git/objects
+  170  cd /var/www/html
+  171  git pull origin master
+  172  sudo git pull origin master
+  173  chmod 777 /var
+  174  sudo chmod 777 /var
+  175  ls -la /
+  176  ls -la /var/
+  177  ls -la /var/www
+  178  ls -la /var/www/html
+  179  chmod 777 web
+  180  chmod 777 var
+  181  chmod 777 app
+  182  chmod 777 bin
+  183  chmod 777 var/*
+  184  chmod 777 var/*/*
+  185  chmod 777 var/*/*/*
+  186  chmod 777 var/*/*/*/*
+  187  chmod 777 var/*/*/*/*/*
+  188  chmod 777 var/*/*/*/*/*/*
+  189  nano /etc/httpd/conf.d/welcome.conf
+  190  sudo nano /etc/httpd/conf.d/welcome.conf
+  191  sudo nano /etc/httpd/conf/httpd.conf
+  192  sudo service httpd restart
+  193  sudo git pull origin master
+  194  cd /var/www/html
+  195  sudo git pull origin master
+  196  cd /var/www/html
+  197  sudo git pull origin master
+  198  which mysql
+  199  sudo git pull origin master
+  200  php bin/console cache:clear
+  201  chmod 777 var/logs/*
+  202  sudo chmod 777 var/logs/*
+  203  php bin/console cache:clear
+  204  sudo chmod 777 var/*
+  205  sudo chmod 777 var/*/*
+  206  sudo chmod 777 var/*/*/*
+  207  sudo chmod 777 var/*/*/*/*
+  208  sudo chmod 777 var/*/*/*/*/*
+  209  sudo chmod 777 var/*/*/*/*/*/*
+  210  sudo chmod 777 var/*/*/*/*/*/*/*
+  211  sudo chmod 777 var/*/*/*/*/*/*/*/*
+  212  php bin/console cache:clear
+  213  php bin/console cache:clear --prod
+  214  php bin/console cache:clear --env prod
+  215  sudo chmod 777 var/*
+  216  sudo chmod 777 var/*/8
+  217  sudo chmod 777 var/*/*
+  218  sudo chmod 777 var/*/*/*
+  219  sudo chmod 777 var/*/*/*/*
+  220  sudo chmod 777 var/*/*/*/*/*
+  221  sudo chmod 777 var/*/*/*/*/*/*
+  222  sudo chmod 777 var/*/*/*/*/*/*/*
+  223  sudo nano /etc/httpd/conf/httpd.conf
+  224  ls -l
+  225  sudo service httpd restart
+  226  php bin/console cache:clear --env prod
+  227  sudo git pull origin master
+  228  php bin/console cache:clear --env prod
+  229  ls ~
+  230  sudo git pull origin master
+  231  php bin/console cache:clear --env prod
+  232  cd /var/www/html
+  233  sudo git pull origin master
+  234  php bin/console cache:clear --env prod
+  235  sudo git pull origin master
+  236  php bin/console cache:clear --env prod
+  237  ls
+  238  cd /var/www/html
+  239  ls
+  240  ls ../
+  241  git remote show origin
+  242  sudo nano /home/ec2-user/.ssh/known_hosts
+  243  git remote show origin
+  244  sudo nano ~/.ssh/config
+  245  git remote get-url origin
+  246  sudo nano ~/.ssh/config
+  247  git remote show origin
+  248  sudo nano ~/.ssh/config
+  249  git remote show origin
+  250  ls /home/ec2-user/.ssh
+  251  git remote show origin
+  252  chmod 600 ~/.ssh/HCTest.pem
+  253  git remote show origin
+  254  cd ~/.ssh
+  255  ls
+  256  rm HCTest.pem
+  257  rm config
+  258  ls
+  259  whoami
+  260  pwd
+  261  lsb_release -a
+  262  uname -a
+  263  ls -hal ./
+  264  ls -hal ./TestApp.git/
+  265  alias
+  266  alias ll='ls -hal --color=always'
+  267  ll ./.composer/
+  268  git status
+  269  cat ./TestApp.git/config
+  270  ls
+  271  ls -hal
+  272  alias ll='ls -hal --color=always'
+  273  history
