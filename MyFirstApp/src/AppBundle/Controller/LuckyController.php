@@ -11,18 +11,6 @@ use AppBundle\Entity\Product;
 class LuckyController extends Controller
 {
     /**
-     * @Route("/lucky/number")
-     */
-    public function numberAction()
-    {
-        $number = mt_rand(0, 100);
-
-        return $this->render('lucky/number.html.twig', array(
-            'number' => $number
-        ));
-    }
-
-    /**
      * @Route("/")
      */
     public function viewHome(Request $request)
@@ -39,11 +27,15 @@ class LuckyController extends Controller
      */
     public function viewProductsCreate($name, $price, $des)
     {
+        // create new product and assign values
         $product = new Product();
         $product->setName($name);
         $product->setPrice($price);
         $product->setDescription($des);
 
+        // this is some special doctrine query thing
+        // might be similar to a query object in sqla before query is made
+        // more likely it is the db.session object
         $em = $this->getDoctrine()->getManager();
 
         // tells Doctrine you want to (eventually) save the Product (no queries yet)
@@ -53,7 +45,6 @@ class LuckyController extends Controller
         $em->flush();
 
         return new Response('Saved new product with id '.$product->getId());
-
     }
 
     /**
