@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="welcome">
+        <h1>Instructions</h1>
+        <p>You'll be creating a sample Inventory application to demonstrate your ability to learn Symfony and Doctrine's peculiarities.</p>
+        <ol>
+            <li>Using the provided HCTest key, git clone the TestApp repo and SSH into this server as ec2-user.</li>
+            <li>Create a new index page with a menu link titled "Parts".</li>
+            <li>Create a Category entity which will hold Parts.</li>
+            <li>Create a Part entity that is linked with a Category (other fields are up to you).</li>
+            <li>Create admin pages to create and edit Categories with links in the menu.</li>
+            <li>Create admin pages to create and edit Parts with links in the menu.</li>
+            <li>Add a display of Parts to the index page with the ability to filter by Category.</li>
+            <li>Add the FOSUserBundle module for login capabilities.</li>
+            <li>Create an admin account with username 'admin' and password 'password' (Using the CLI is fine here).</li>
+            <li>Make an admin login page.</li>
+            <li>Restrict access to the admin pages to logged in people.</li>
+            <li>Only display admin links to logged in users.</li>
+            <li>Make sure the website displays correctly in production mode and let us know you've finished.</li>
+        </ol>
+    </div>
+{% endblock %}

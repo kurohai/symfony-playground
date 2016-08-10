@@ -1,0 +1,52 @@
+div.app-content {
+    overflow: visible;
+    color: #FFFFFF;
+    width: auto;
+    height: 100%;
+    margin: 2em;
+    -webkit-overflow-scrolling: touch;
+}
+
+@media (min-width: 768px){
+    div.app-content {
+        margin-left: 240px;
+        margin-right: 1em;
+        margin-top: 5em;
+    }
+
+    .navbar-inverse .navbar-nav > li > a {
+        border: 1px solid;
+        padding: 8px;
+        margin: 8px;
+    }
+}
+
+.div-table-test {
+    width: auto;
+    min-width: 50%;
+    height: 100%;
+    /*float: right;*/
+    /*margin-right: 10%;*/
+}
+
+.table-test {
+    /*width: 80%;*/
+    height: inherit;
+}
+
+input[type="text"] {
+    color: black;
+    width: 15em;
+}
+
+label[for^="product_"] {
+    width:8em;
+    /*text-align: center;*/
+    vertical-align: top;
+}
+
+textarea[id^="product_"] {
+    color: black;
+    width: 15em;
+}
+
