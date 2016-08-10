@@ -24,18 +24,18 @@
         </tbody>
     </table>
     </div>
+            <div>
+            <a class="btn btn-primary solitary-button" href="{{ path('product_index') }}">Back to the list</a>
+            </div>
+            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+            <div>
+                <a class="btn btn-primary solitary-button" href="{{ path('product_edit', { 'id': product.id }) }}">Edit</a>
+                </div>
+                <div>
+                {{ form_start(delete_form) }}
+                    <input class="btn btn-primary solitary-button"  type="submit" value="Delete">
+                {{ form_end(delete_form) }}
+                </div>
+            {% endif %}
 
-    <ul>
-        <li>
-            <a class="btn btn-primary" href="{{ path('product_index') }}">Back to the list</a>
-        </li>
-        <li>
-            <a class="btn btn-primary" href="{{ path('product_edit', { 'id': product.id }) }}">Edit</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input class="btn btn-primary"  type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
 {% endblock %}

@@ -3,11 +3,7 @@
 {% block body %}
     <h1>Product list</h1>
 
-    <ul>
-        <li>
-            <a class="btn btn-primary" href="{{ path('product_new') }}">Create a new entry</a>
-        </li>
-    </ul>
+    <a class="btn btn-primary solitary-button" href="{{ path('product_new') }}">Create a new entry</a>
     <div class="table-responsive div-table-test">
         <table class="table table-bordered">
             <thead>
@@ -27,14 +23,10 @@
                 <td>{{ product.price }}</td>
                 <td>{{ product.description }}</td>
                 <td>
-                    <ul>
-                        <li>
-                            <a class="btn btn-primary" href="{{ path('product_show', { 'id': product.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a class="btn btn-primary" href="{{ path('product_edit', { 'id': product.id }) }}">edit</a>
-                        </li>
-                    </ul>
+                    <a class="btn btn-primary" href="{{ path('product_show', { 'id': product.id }) }}">show</a>
+                    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                    <a class="btn btn-primary" href="{{ path('product_edit', { 'id': product.id }) }}">edit</a>
+                    {% endif %}
                 </td>
             </tr>
         {% endfor %}
@@ -43,4 +35,18 @@
 
     </div>
 
+{% endblock %}
+
+{% block javascripts %}
+    <script type="text/javascript">
+    var navActive = {
+        init: function() {
+            $("#nav-home").removeClass("active");
+            $("#nav-part-list").addClass("active");
+            $("#nav-category-list").removeClass("active");
+        },
+    };
+    window.onload = navActive.init();
+
+    </script>
 {% endblock %}

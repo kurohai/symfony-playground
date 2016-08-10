@@ -13,12 +13,22 @@ div.app-content {
         margin-right: 1em;
         margin-top: 5em;
     }
+    .div-table-test {
+        max-width: 95%;
+    }
 
     .navbar-inverse .navbar-nav > li > a {
         border: 1px solid;
         padding: 8px;
         margin: 8px;
+        margin-right: 12em;
     }
+}
+@media (min-width: 960px){
+    .div-table-test {
+        max-width: 80%;
+    }
+
 }
 
 .div-table-test {
@@ -48,5 +58,12 @@ label[for^="product_"] {
 textarea[id^="product_"] {
     color: black;
     width: 15em;
+}
+
+.solitary-button {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
 }
 
