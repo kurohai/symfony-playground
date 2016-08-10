@@ -1,5 +1,5 @@
 <?php
-// src/AppBundle/Controller/LuckyController.php
+// src/AppBundle/Controller/AppController.php
 namespace AppBundle\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -8,7 +8,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use AppBundle\Entity\Product;
 
-class AwesomeController extends Controller
+class AppController extends Controller
 {
     /**
      * @Route("/")
