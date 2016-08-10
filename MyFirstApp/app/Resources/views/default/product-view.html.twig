@@ -2,7 +2,14 @@
 
 {% block body %}
     <div id="wrapper">
+        <div id="product-select">
+            <form id="product-select-form" action="#" method="GET">
+                <input type="text" id="product-select-input" name="product-select-input" />
+                <input id="product-select-button" type="button" name="submit" value="Submit" />
+            </form>
+        </div>
         <div id="container">
+
 
             <div id="status">
                 <p>
@@ -14,6 +21,8 @@
                 <br />
                 description: {{ product.description}}
                 <br />
+                Price: {{ product.price}}
+                <br />
                 </p>
             </div>
 
@@ -21,7 +30,50 @@
     </div>
 {% endblock %}
 
+
+
+{% block javascripts %}
+
+    <script type="text/javascript">
+
+        var navActive = {
+            init: function() {
+                $("#nav-home").removeClass("active");
+                $("#nav-product-list").removeClass("active");
+                $("#nav-product-search").addClass("active");
+            },
+
+        };
+
+    var productSearch = {
+        init: function() {
+            this.bindEvents();
+            navActive.init();
+        },
+        bindEvents: function() {
+            $("#product-select-form").on("submit", productSearch.eventOnFormSubmit);
+            $("#product-select-button").on("click", productSearch.eventOnFormSubmit);
+        },
+        eventOnFormSubmit: function(form) {
+            form.preventDefault();
+
+            var query = $("#product-select-input").val();
+            // window.location="http://" + window.hostname + '/product/' + query.toString();
+
+            window.location.href = '/product/' + query.toString();
+            console.log("query: " + query.toString())
+        },
+    };
+
+    var prod = productSearch.init();
+
+    </script>
+
+{% endblock %}
+
+
 {% block stylesheets %}
+
 <style>
     /*body { background: #F5F5F5; font: 18px/1.5 sans-serif; }*/
     h1, h2 { line-height: 1.2; margin: 0 0 .5em; }
@@ -37,6 +89,7 @@
     #welcome h1 span { display: block; font-size: 75%; }
     #icon-status, #icon-book { float: left; height: 64px; margin-right: 1em; margin-top: -4px; width: 64px; }
     #icon-book { display: none; }
+    input {color: black;}
 
     @media (min-width: 768px) {
         #wrapper { width: 80%; margin: 2em auto; }

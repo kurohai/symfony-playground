@@ -10,3 +10,11 @@
 /vendor/
 /bin/
 /composer.phar
+.ssh/
+secret.txt
+secret.md
+*.lnk
+log/
+logs/
+sftp-config.json
+sftp-config*.json

@@ -35,7 +35,7 @@ class Product
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -58,7 +58,7 @@ class Product
     /**
      * Get name
      *
-     * @return string 
+     * @return string
      */
     public function getName()
     {
@@ -81,7 +81,7 @@ class Product
     /**
      * Get price
      *
-     * @return string 
+     * @return string
      */
     public function getPrice()
     {
@@ -104,10 +104,25 @@ class Product
     /**
      * Get description
      *
-     * @return string 
+     * @return string
      */
     public function getDescription()
     {
         return $this->description;
+    }
+
+    /**
+     * Get class attribute keys
+     *
+     * @return array
+     */
+    public function getEntityKeys()
+    {
+        $keys = array();
+        foreach ($this as $key => $value) {
+            $keys[] = $key;
+        }
+        return $keys;
+
     }
 }
