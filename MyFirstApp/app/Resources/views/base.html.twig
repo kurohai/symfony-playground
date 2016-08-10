@@ -47,9 +47,10 @@
         <link rel="stylesheet" href="/lib/font-awesome.css">
     </head>
     <body>
-        {% include 'navbar.html.twig' %}
-        <div class="app-content">
-        {% block body %}{% endblock %}
+<!--         {% include 'navbar.html.twig' %}
+ -->        <div class="app-content">
+
+        {% block fos_user_content %}{% include 'navbar.html.twig' %}{% endblock %}
         </div>
         <!-- <script type="text/javascript" src="lib/jquery.js"></script> -->
         <script type="text/javascript" src="/lib/jquery-3.1.0.js"></script>
