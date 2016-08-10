@@ -45,8 +45,8 @@
     eventOnFormSubmit: function(form) {
     form.preventDefault();
     var query = $("#product-select-input").val();
-    // window.location="http://" + window.hostname + '/product/' + query.toString();
-    window.location.href = '/product/' + query.toString();
+    // window.location="http://" + window.hostname + '/products/' + query.toString();
+    window.location.href = '/products/' + query.toString();
     console.log("query: " + query.toString())
     },
     };
